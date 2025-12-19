@@ -1,14 +1,20 @@
+import { Route, Routes } from "react-router-dom";
+import SignUpPage from "./pages/SignUpPage";
+import SignInPage from "./pages/SignInPage";
+import SettingsPage from "./pages/SettingsPage";
+import ProfilePage from "./pages/ProfilePage";
+import HomePage from "./pages/HomePage";
+
 export default function App() {
   return (
     <div>
-      <button className="btn btn-neutral">Neutral</button>
-      <button className="btn btn-primary">Primary</button>
-      <button className="btn btn-secondary">Secondary</button>
-      <button className="btn btn-accent">Accent</button>
-      <button className="btn btn-info">Info</button>
-      <button className="btn btn-success">Success</button>
-      <button className="btn btn-warning">Warning</button>
-      <button className="btn btn-error">Error</button>
+      <Routes>
+        <Route path="/" Component={HomePage} />
+        <Route path="/signup" Component={SignUpPage} />
+        <Route path="/signin" Component={SignInPage} />
+        <Route path="/settings" Component={SettingsPage} />
+        <Route path="/profile" Component={ProfilePage} />
+      </Routes>
     </div>
   );
 }
