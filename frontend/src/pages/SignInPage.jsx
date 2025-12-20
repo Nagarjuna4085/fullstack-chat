@@ -10,7 +10,9 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
-  const { login, isLoggingIn } = useAuthStore();
+  const { login, isLoggingIn, authUser } = useAuthStore();
+
+  console.log("authUser", authUser);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

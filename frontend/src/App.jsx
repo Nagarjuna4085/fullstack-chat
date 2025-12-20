@@ -40,7 +40,10 @@ export default function App() {
           path="/signup"
           element={authUser === null ? <SignUpPage /> : <Navigate to="/" />}
         />
-        <Route path="/signin" element={<SignInPage />} />
+        <Route
+          path="/signin"
+          element={!authUser ? <SignInPage /> : <Navigate to="/" />}
+        />
         <Route path="/settings" element={<SettingsPage />} />
         <Route
           path="/profile"
