@@ -3,6 +3,10 @@ import { v2 as cloudinary } from "cloudinary";
 import { config } from "dotenv";
 
 config();
+console.log("Cloudinary config:");
+console.log("Cloud Name:", process.env.CLOUDINARY_CLOUD_NAME);
+console.log("API Key:", process.env.CLOUDINARY_API_KEY);
+console.log("API Secret:", process.env.CLOUDINARY_API_SECRET ? "LOADED" : "MISSING");
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
